@@ -1,4 +1,4 @@
-# correlationship between population & #positive COVID-19 cases in Japan by prefecture
+# A Pyhton project: Correlationship between population & #positive COVID-19 cases in Japan by prefecture
 
 ![image](https://user-images.githubusercontent.com/40524432/194751564-6671d26d-00aa-416a-bbd8-d98c242c08cb.png)
 
