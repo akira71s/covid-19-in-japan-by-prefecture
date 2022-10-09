@@ -14,3 +14,20 @@ Source: ./covid-19-japan-2022-01-04.csv
 The csv file can be downloaded from https://www.stopcovid19.jp/tableview.html.
 This is a portal website for COVID-19 run by the Japanese governmental organization.
 There is no potential for personally identifiable distinctions as it only contains data 'by prefecture'.
+
+## Data modification
+By passing "thousands=','" parameters, I will treat "npopulation" & "area" columns as int64 (the original not
+string object) so that they can be easily sorted for analysis. Also, even though the csv file has columns for #
+deaths or # current patients (who are not recovered yet), I will not focus on those data.
+
+```Python
+# import modules
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+# read the csv file
+df = pd.read_csv(
+'./covid-19-japan-2022-01-04.csv',
+thousands=',',
+usecols=['name', 'ntotalpatients', 'npopulation', 'areainkm^2'])
+```
